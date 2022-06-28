@@ -5,14 +5,12 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import SignInForm from './SignInForm'
 
 const NavigationBar = ({ username, loggedIn }) => {
+	 loggedIn = false
   return (
     <>
       <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
         <Container fluid>
           <Navbar.Brand href="/">Board Game Tracker</Navbar.Brand>
-					<Nav>
-						<Nav.Link href="/bg">All Games</Nav.Link>
-					</Nav>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
             id="responsive-navbar-nav"
@@ -21,9 +19,10 @@ const NavigationBar = ({ username, loggedIn }) => {
             <Nav>
               {loggedIn === true ? (
                 <>
-                  <Nav.Link href="#collection">Collection</Nav.Link>
-                  <Nav.Link href="#wishlist">Wishlist</Nav.Link>
-                  <Nav.Link href="#friends">Friends</Nav.Link>
+				<Nav.Link href="/boardgames">All Games</Nav.Link>
+                  <Nav.Link href="/collection">Collection</Nav.Link>
+                  <Nav.Link href="/wishlist">Wishlist</Nav.Link>
+                  <Nav.Link href="/friends">Friends</Nav.Link>
                   <NavDropdown
                     title={username}
                     id="collasible-nav-dropdown"

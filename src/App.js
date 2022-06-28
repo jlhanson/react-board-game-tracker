@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
 import NavigationBar from './components/NavigationBar'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
@@ -12,7 +11,7 @@ function App() {
         <NavigationBar username="gimikz" />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="bg" element={<BoardgamePage />} />
+          <Route path="/boardgames" element={<BoardgamePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
